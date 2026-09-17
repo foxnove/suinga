@@ -54,10 +54,9 @@ body {
   text-shadow: 0 2px 22px rgba(0, 0, 0, .55);
 }
 
-.hero-content > * { opacity: 0; transform: translateY(1.1rem); }
-.is-ready .hero-content > * { animation: hero-reveal .85s cubic-bezier(.22, 1, .36, 1) forwards; }
-.is-ready .brand-logo { animation-delay: .08s; }
-.is-ready .hero-content > :nth-child(1) { animation-delay: .08s; }
+.hero-content > :not(.brand-logo) { opacity: 0; transform: translateY(1.1rem); }
+.is-ready .hero-content > :not(.brand-logo) { animation: hero-reveal .85s cubic-bezier(.22, 1, .36, 1) forwards; }
+.is-ready .brand-logo { opacity: 1; transform: translateY(0); }
 .is-ready .hero-content > :nth-child(2) { animation-delay: .22s; }
 .is-ready .hero-content > :nth-child(3) { animation-delay: .34s; }
 .is-ready .hero-content > :nth-child(4) { animation-delay: .46s; }
@@ -68,6 +67,8 @@ body {
   height: auto;
   margin-bottom: clamp(1.25rem, 3vw, 2rem);
   filter: drop-shadow(0 .75rem 1.6rem rgba(0, 0, 0, .5));
+  opacity: 0;
+  transform: translateY(1.1rem);
   transition: filter .65s ease, opacity .65s ease, transform .65s cubic-bezier(.22, 1, .36, 1);
 }
 
@@ -180,5 +181,5 @@ h1 {
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
-  .hero-content > * { opacity: 1; transform: none; }
+  .hero-content > *, .brand-logo { opacity: 1; transform: none; }
 }

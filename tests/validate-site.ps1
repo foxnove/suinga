@@ -48,6 +48,7 @@ $styles = Get-Content -Raw (Join-Path $projectRoot 'assets/css/styles.css')
 $requiredMotionStyles = @(
     '.brand-logo:hover',
     '.is-ready .brand-logo',
+    '.hero-content > :not(.brand-logo)',
     '@keyframes',
     'prefers-reduced-motion'
 )
