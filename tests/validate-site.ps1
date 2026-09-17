@@ -44,4 +44,23 @@ if ($missingTokens.Count -gt 0) {
     throw "Elementos obrigatórios ausentes na página: $($missingTokens -join ', ')"
 }
 
-Write-Host 'PASS: estrutura, identidade e destinos de streaming validados.'
+$styles = Get-Content -Raw (Join-Path $projectRoot 'assets/css/styles.css')
+$requiredMotionStyles = @(
+    '.brand-logo:hover',
+    '.is-ready .brand-logo',
+    '@keyframes',
+    'prefers-reduced-motion'
+)
+$missingMotionStyles = @($requiredMotionStyles | Where-Object { $styles -notlike "*$_*" })
+if ($missingMotionStyles.Count -gt 0) {
+    throw "Estilos de movimento ausentes: $($missingMotionStyles -join ', ')"
+}
+
+$script = Get-Content -Raw (Join-Path $projectRoot 'assets/js/main.js')
+$requiredKeyboardKeys = @('ArrowLeft', 'ArrowRight', "'Home'", "'End'")
+$missingKeyboardKeys = @($requiredKeyboardKeys | Where-Object { $script -notlike "*$_*" })
+if ($missingKeyboardKeys.Count -gt 0) {
+    throw "Controles de teclado ausentes: $($missingKeyboardKeys -join ', ')"
+}
+
+Write-Host 'PASS: estrutura, identidade, streaming e interações validados.'
