@@ -30,7 +30,13 @@ $requiredTokens = @(
     'Amazon Music',
     'YouTube Music',
     'logo-suinga.webp',
-    'slide-08.webp'
+    'slide-08.webp',
+    'https://www.youtube.com/@suinga',
+    'https://open.spotify.com/artist/3gGILrQvJ5CUctb3bfwXqi',
+    'https://www.deezer.com/artist/5360265',
+    'https://music.apple.com/br/artist/suinga/757715951',
+    'https://music.amazon.com/artists/B00GSQ6NOW/suinga',
+    'https://music.youtube.com/@suinga'
 )
 
 $missingTokens = @($requiredTokens | Where-Object { $page -notlike "*$_*" })
