@@ -1,0 +1,7 @@
+# Fotos originais em alta resolução; o site usa apenas assets/images/*.webp.
+img/
+
+# Dependências e arquivos locais.
+node_modules/
+.DS_Store
+Thumbs.db
