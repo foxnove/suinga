@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+  <defs>
+    <linearGradient id="shade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#07130f" stop-opacity="0.62"/>
+      <stop offset="49%" stop-color="#07130f" stop-opacity="0.08"/>
+      <stop offset="63%" stop-color="#07130f" stop-opacity="0.26"/>
+      <stop offset="100%" stop-color="#07130f" stop-opacity="0.92"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1200" fill="url(#shade)"/>
+  <rect x="112" y="824" width="74" height="6" rx="3" fill="#ffbf1f"/>
+  <text x="112" y="877" fill="#ffd850" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" letter-spacing="5">A TRILHA DA SUA ENERGIA</text>
+  <text x="112" y="946" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700">Música popular baiana que mistura axé,</text>
+  <text x="112" y="1002" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700">samba-reggae, ijexá e rock em um som autoral.</text>
+  <text x="112" y="1102" fill="#f9f3e7" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" letter-spacing="3">SUINGA.COM.BR</text>
+</svg>

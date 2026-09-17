@@ -5,6 +5,7 @@ $requiredFiles = @(
     'index.html',
     'assets/css/styles.css',
     'assets/images/logo-suinga.webp',
+    'assets/images/suinga-social-card.jpg',
     'assets/images/slide-01.webp',
     'assets/images/slide-02.webp',
     'assets/images/slide-03.webp',
@@ -36,7 +37,12 @@ $requiredTokens = @(
     'https://www.deezer.com/artist/5360265',
     'https://music.apple.com/br/artist/suinga/757715951',
     'https://music.amazon.com/artists/B00GSQ6NOW/suinga',
-    'https://music.youtube.com/@suinga'
+    'https://music.youtube.com/@suinga',
+    'property="og:image" content="https://www.suinga.com.br/assets/images/suinga-social-card.jpg"',
+    'property="og:image:width" content="1200"',
+    'property="og:image:height" content="1200"',
+    'property="og:locale" content="pt_BR"',
+    'name="twitter:card" content="summary_large_image"'
 )
 
 $missingTokens = @($requiredTokens | Where-Object { $page -notlike "*$_*" })
